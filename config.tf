@@ -6,13 +6,13 @@ terraform {
     }
   }
   required_version = ">= 1.0"
-  # backend "remote" {
-  #   hostname     = "app.terraform.io"
-  #   organization = "methridge"
-  #   workspaces {
-  #     name = "me-aws-tf-role"
-  #   }
-  # }
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "methridge"
+    workspaces {
+      name = "me-aws-sandbox-dns"
+    }
+  }
 }
 
 provider "aws" {
