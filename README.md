@@ -9,9 +9,10 @@ _NOTE:_ Using DNSSEC requires that the region be `us-east-1`
 - Create `terraform.tfvars` file
 
 ```hcl
-region    = "us-east-1"
-username  = "awesomeuser"
-zone_name = "aws.awesomedomain.com"
+environment = "sandbox"
+region      = "us-east-1"
+username    = "awesomeuser"
+zone_name   = "aws.awesomedomain.com"
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -45,6 +46,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| environment | Environment name / tag | `string` | n/a | yes |
 | username | User name for access and to prefix all resources. ex: awesomeuser | `string` | n/a | yes |
 | zone\_name | Your public DNS Zone. ex: aws.awesomedomain.com | `string` | n/a | yes |
 | region | AWS Region | `string` | `"us-east-1"` | no |

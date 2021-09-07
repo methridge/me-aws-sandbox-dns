@@ -50,8 +50,8 @@ resource "aws_route53_zone" "sandbox" {
   comment = "DNS zone for AWS Sandbox"
 
   tags = {
-    Environment = "sandbox"
-    username    = "ethridgm"
+    Environment = var.environment
+    username    = var.username
   }
 }
 
